@@ -1,10 +1,8 @@
-// TODO: wait until TypeKit is loaded
-// try{Typekit.load({ active: $(window).load(function(){ animateOnLoad(); })  });}catch(e){}
+try{
+	Typekit.load({ active: $(window).load(function(){ animateOnLoad(); })  });
+}catch(e){}
 
 $(window).on("load", function() {
-	animateOnLoad(); 
-
-
 	var scopeImages = [
 		"http://media-cache-ec0.pinimg.com/736x/ba/30/13/ba3013a07ff3508095064edc2e0829a0.jpg",
 		"http://media-cache-ec0.pinimg.com/236x/6f/77/57/6f7757a20914c650ecbd3c61b7b3d68e.jpg",
