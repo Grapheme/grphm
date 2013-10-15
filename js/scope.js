@@ -1,6 +1,8 @@
-try{
-	Typekit.load({ active: $(window).load(function(){ animateOnLoad(); })  });
-}catch(e){}
+try {
+	Typekit.load({ 
+		active : animateOnLoad 
+	});
+} catch(e){}
 
 $(window).on("load", function() {
 	var scopeImages = [
