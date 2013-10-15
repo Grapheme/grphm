@@ -149,7 +149,7 @@ article.text { margin-top: 110px; }
 	.promo .promo-logo{ background: url('../img/logo.png') no-repeat; width: 262px; height: 82px; margin: 0 auto; position: absolute; top: 9em; right: 0; left: 0; }
 	.promo .scroll { margin: 0 auto; /*background: url('../img/scroll-down.png') no-repeat; height: 53px;*/ width: 53px; display: block; position: absolute; bottom: 5%; right: 0; left: 0; }
 	.promo video { top: 0; left: 0; position: absolute; }
-	.promo .overlay { opacity: 0.55; background: #222; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+	.promo .overlay { opacity: 0.4; background: #222; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 	.promo .text { text-align: center; width: 71em; position: absolute; color: #fff; margin: 0 auto 14em; padding: 15% 0 0; right: 0; left: 0; bottom: 0; top: 0; text-shadow: 1px 1px 3px #000; } 
 	.promo h1 { opacity: 0; font-size: 44px; text-transform: uppercase; letter-spacing: -1px; margin: 0; padding: 0; 
 
