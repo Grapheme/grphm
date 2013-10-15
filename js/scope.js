@@ -22,7 +22,7 @@ $(window).on("load", function() {
 			scope.setImage(scopeImages[currentIndex]);
 			currentIndex = (currentIndex + 1) % scopeImages.length;
 
-			setTimeout(changeImage, 5000);
+			setTimeout(changeImage, 8000);
 		}
 
 		changeImage();
