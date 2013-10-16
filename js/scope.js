@@ -1,10 +1,7 @@
-try {
-	Typekit.load({ 
-		active : animateOnLoad 
-	});
-} catch(e){}
-
 $(window).on("load", function() {
+	Typekit.load();
+	animateOnLoad();
+
 	var scopeImages = [
 		"http://media-cache-ec0.pinimg.com/736x/ba/30/13/ba3013a07ff3508095064edc2e0829a0.jpg",
 		"http://media-cache-ec0.pinimg.com/236x/6f/77/57/6f7757a20914c650ecbd3c61b7b3d68e.jpg",
@@ -40,12 +37,28 @@ $(window).on("load", function() {
 	        } 
 	    });
 
-	    $(window).mousemove(function(event) {
-			var factorx = event.pageX / $(window).width();
-			var factory = event.pageY / $(window).height();
 
-            scope.kaleidoscope.angleTarget = factorx;
-            scope.kaleidoscope.zoomTarget  = 1.0 + 0.5 * factory;
+	    function moveKaleidoscope(factorx, factory) {
+	            scope.kaleidoscope.angleTarget = factorx;
+	            scope.kaleidoscope.zoomTarget  = 1.0 + 0.5 * factory;
+	    }
+
+	    $(window).mousemove(function(event) {
+	        moveKaleidoscope(
+	            event.pageX / $(window).width(),
+	            event.pageY / $(window).height()
+	        );
+	    });
+
+	    dragContainer.on("touchmove", function(evt) {
+	        evt.preventDefault();
+	        var originalEvent = evt.originalEvent;
+	        
+	        var touch = originalEvent.touches[0];  
+	        moveKaleidoscope(
+	            touch.pageX / $(window).width(),
+	            touch.pageY / $(window).height()
+	        );
 	    });
 
 	} catch(e) {}
