@@ -104,9 +104,11 @@ html, body {
 html { overflow-x: hidden; min-width: 300px; }
 body { margin: 0; padding: 0; /*min-width: 960px;*/ min-height: 400px; }
 
+
+.scope-pattern { display: none; }
 .graphemescope { height: 100%; }
 .graphemescope canvas{ height: 100% !important; }
-.morelink { display: none; position: absolute; top: 0; left: 0; width: 38px; height: 32px; background: url(../img/mobile-menu-active.png) no-repeat; cursor: pointer; z-index: 11111; }
+.morelink { display: none; position: absolute; top: 0; left: 0; width: 38px; height: 32px; background: url(images/mobile-menu-active.png) no-repeat; cursor: pointer; z-index: 11111; }
 .morelink:hover { opacity: .7; }
 
 header { position: fixed; width: 100%; top: 0; height: 50px; z-index: 10999; box-shadow: 0 10px 0 rgba(0,0,0,0.05); overflow: hidden; }
@@ -121,7 +123,7 @@ article.text { margin-top: 110px; }
 	.credentials a.mailto { text-transform: uppercase; font-weight: 600; }
 	.credentials .social-links { float: right; margin: 0 35px 0 0; height: 50px; list-style: none; }
 		.social-links li { float: left; line-height: 50px; }
-		.social-links .social { display: inline-block; margin: 0 0.5em 0 0; background: url('../img/sprites.png'); height: 50px; width: 25px; opacity: 0.15; transition: opacity 0.4s; }
+		.social-links .social { display: inline-block; margin: 0 0.5em 0 0; background: url('images/sprites.png'); height: 50px; width: 25px; opacity: 0.15; transition: opacity 0.4s; }
 		.social-links .social:hover { opacity: 0.75; }
 		.social.twitter { background-position: 0 13px; }
 		.social.facebook { background-position: 22px 13px; }
@@ -140,14 +142,14 @@ article.text { margin-top: 110px; }
 	min-height: /*500/780*/660px;
 	position: relative;
 	overflow: hidden;
-	background: url('../img/promo.jpg') no-repeat center center fixed; 
+	background: url('images/promo.jpg') no-repeat center center fixed; 
 	-webkit-background-size: cover;
   	   -moz-background-size: cover;
   		 -o-background-size: cover;
   			background-size: cover; 
 }
-	.promo .promo-logo{ background: url('../img/logo.png') no-repeat; width: 262px; height: 82px; margin: 0 auto; position: absolute; top: 9em; right: 0; left: 0; }
-	.promo .scroll { margin: 0 auto; /*background: url('../img/scroll-down.png') no-repeat; height: 53px;*/ width: 53px; display: block; position: absolute; bottom: 5%; right: 0; left: 0; }
+	.promo .promo-logo{ background: url('images/logo.png') no-repeat; width: 262px; height: 82px; margin: 0 auto; position: absolute; top: 9em; right: 0; left: 0; }
+	.promo .scroll { margin: 0 auto; /*background: url('images/scroll-down.png') no-repeat; height: 53px;*/ width: 53px; display: block; position: absolute; bottom: 5%; right: 0; left: 0; }
 	.promo video { top: 0; left: 0; position: absolute; }
 	.promo .overlay { opacity: 0.4; background: #222; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 	.promo .text { text-align: center; width: 71em; position: absolute; color: #fff; margin: 0 auto 14em; padding: 15% 0 0; right: 0; left: 0; bottom: 0; top: 0; text-shadow: 1px 1px 3px #000; } 

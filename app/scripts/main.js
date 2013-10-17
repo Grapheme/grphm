@@ -58,11 +58,7 @@ $('.morelink').click( function(){
 	Typekit.load();
 	animateOnLoad();
 
-	var scopeImages = [
-		"http://media-cache-ec0.pinimg.com/736x/ba/30/13/ba3013a07ff3508095064edc2e0829a0.jpg",
-		"http://media-cache-ec0.pinimg.com/236x/6f/77/57/6f7757a20914c650ecbd3c61b7b3d68e.jpg",
-		"http://media-cache-ec0.pinimg.com/736x/aa/1e/7f/aa1e7f7313191a261525056e58a937e6.jpg"
-	];
+	var scopePatterns = $(".scope-pattern");
 
 	try {
 		var container = $(".graphemescope"); 			    
@@ -72,8 +68,8 @@ $('.morelink').click( function(){
 
 		var currentIndex = 0;
 		function changeImage() {
-			scope.setImage(scopeImages[currentIndex]);
-			currentIndex = (currentIndex + 1) % scopeImages.length;
+			scope.setImage(scopePatterns[currentIndex]);
+			currentIndex = (currentIndex + 1) % scopePatterns.length;
 
 			setTimeout(changeImage, 8000);
 		}

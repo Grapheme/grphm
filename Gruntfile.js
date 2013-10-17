@@ -3,14 +3,15 @@ var path = require("path");
 module.exports = function(grunt) {
 
   // Load Grunt tasks declared in the package.json file
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON("package.json"),
 
     express: {
       dist: {
         options: {
+          port : 9000,
           hostname: "*",
           bases : [ path.resolve("dist") ],
           livereload : true
@@ -20,26 +21,42 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        banner: "/*! <%= pkg.name %> <%= grunt.template.today('dd-mm-yyyy') %> */\n"
       },
 
       vendor: {
         files: {
-          "dist/vendor.min.js" : [ "src/js/vendor/*.js" ]
+          "dist/scripts/vendor.min.js" : [ "app/scripts/vendor/*.js" ]
         }
       },
 
       dist: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['src/js/*.js']
+          "dist/scripts/<%= pkg.name %>.min.js": ["app/scripts/*.js"]
+        }
+      }
+    },
+
+    cssmin: {
+      dist: {
+        files: {
+          "dist/styles/<%= pkg.name %>.min.css": [ "app/styles/*.css" ]
         }
       }
     },
 
     watch: {
       dist: {
-        files: [ "src/js/*.js" ],
+        files: [ "app/scripts/*.js" ],
         tasks: [ "uglify:dist" ],
+        options: {
+          livereload : true
+        },
+      },
+
+      css: {
+        files: [ "app/styles/*.css" ],
+        tasks: [ "cssmin" ],
         options: {
           livereload : true
         },
@@ -48,6 +65,6 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('build', [ 'uglify:vendor', "uglify:dist" ]);
-  grunt.registerTask('server', [ 'express', 'watch' ]);
+  grunt.registerTask("build", [ "uglify:vendor", "uglify:dist", "cssmin" ]);
+  grunt.registerTask("server", [ "build", "express", "watch" ]);
 };
