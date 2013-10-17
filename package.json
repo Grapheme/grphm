@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
+  "readme" : "README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/Grapheme/grphm.git"
