@@ -45,6 +45,18 @@ module.exports = function(grunt) {
       }
     },
 
+    ftpush: {
+      build: {
+        auth: {
+          host: 'grphm.com',
+          port: 21,
+          authKey : "key"
+        },
+        src: 'dist',
+        dest: '/var/www/grphm'
+      }
+    },
+
     watch: {
       dist: {
         files: [ "app/scripts/*.js" ],

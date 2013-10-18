@@ -1,5 +1,8 @@
 # Created by http://gitignore.io
 
+.ftppass
+.grunt
+
 ### Node ###
 lib-cov
 *.seed

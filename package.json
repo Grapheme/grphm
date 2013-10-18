@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "readme" : "README.md",
+  "readme": "README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/Grapheme/grphm.git"
@@ -29,6 +29,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-express": "~1.2.1",
     "matchdep": "~0.3.0",
-    "grunt-contrib-cssmin": "~0.6.2"
+    "grunt-contrib-cssmin": "~0.6.2",
+    "grunt-contrib-ftpush": "~0.3.2"
   }
 }
