@@ -91,8 +91,8 @@ $('.morelink').click( function(){
 
 
 	    function moveKaleidoscope(factorx, factory) {
-	            scope.kaleidoscope.angleTarget = factorx;
-	            scope.kaleidoscope.zoomTarget  = 1.0 + 0.5 * factory;
+	           scope.angleTarget = factorx;
+	           scope.zoomTarget  = 1.0 + 0.5 * factory;
 	    }
 
 	    $(window).mousemove(function(event) {
