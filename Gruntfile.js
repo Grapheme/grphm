@@ -53,7 +53,7 @@ module.exports = function(grunt) {
           authKey : "key"
         },
         src: 'dist',
-        dest: '/var/www/grphm'
+        dest: '~/grphm'
       }
     },
 
