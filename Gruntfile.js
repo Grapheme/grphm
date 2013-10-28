@@ -45,6 +45,18 @@ module.exports = function(grunt) {
       }
     },
 
+    'sftp-deploy' : {
+        build: {
+          auth: {
+            host: 'grphm.com',
+            port: 22,
+            authKey: 'key'
+          },
+          src: 'dist',
+          dest: 'grphm'
+      }
+    },
+
     ftpush: {
       build: {
         auth: {
@@ -79,4 +91,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask("build", [ "uglify:vendor", "uglify:dist", "cssmin" ]);
   grunt.registerTask("server", [ "build", "express", "watch" ]);
+  grunt.registerTask("deploy", [ "build", "sftp-deploy" ]);
 };

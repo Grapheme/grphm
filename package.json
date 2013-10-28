@@ -30,6 +30,7 @@
     "grunt-express": "~1.2.1",
     "matchdep": "~0.3.0",
     "grunt-contrib-cssmin": "~0.6.2",
-    "grunt-contrib-ftpush": "~0.3.2"
+    "grunt-contrib-ftpush": "~0.3.2",
+    "grunt-sftp-deploy": "0.0.9"
   }
 }
