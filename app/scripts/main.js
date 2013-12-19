@@ -1,6 +1,6 @@
 jQuery(function($) {
 	$(window).on("load", function() {
-
+var a = 3;
 function animateOnLoad() {
 	var $fTop = $('.promo h1');
 	var $fBot = $('.promo .company-desc');	
